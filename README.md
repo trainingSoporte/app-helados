@@ -28,15 +28,35 @@ Por Ejemplo:
 c:\miapp
 ```
 
-_2 Has clic en   para copiar el proyecto GIT_
+usando comandos en Git Bash:
 
-_3 Abre una line de comandos (GIT Bash - Recomendado!) Ir al directorio creado en el paso 1_
+```
+mkdir miapp
+cd miapp
+pwd
+
+```
+
+_2 Has clic en CODE para copiar el proyecto GIT_
+
+_3 Abre una linea de comandos (GIT Bash - Recomendado!) Ir al directorio creado en el paso 1_
 
 _4 Ejecuta el siguiente comando:_
 
 ```
 git clone https://github.com/trainingSoporte/app-helados.git
 ```
+Luego, usando comandos en Git Bash:
 
+```
+ls
+cd app-helados
+```
+
+puedes abrir en Visual Studio Code:
+```
+code .
+
+```
 __
 
