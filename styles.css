@@ -7,6 +7,58 @@ img {
   margin-right: auto;
 }
 
+#img_1 {
+  background-image: url("../img/americana.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100px 200px;
+}
+
+#img_2 {
+  background-image: url("../img/blueberry.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100px 200px;
+}
+
+#img_3 {
+  background-image: url("../img/dulce-leche.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100px 200px;
+}
+
+#img_4 {
+  background-image: url("../img/frutilla.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100px 200px;
+}
+
+#img_5 {
+  background-image: url("../img/granizado.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100px 200px;
+}
+
+#img_6 {
+  background-image: url("../img/menta.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100px 200px;
+}
+
+#img_7 {
+  background-image: url("../img/vainilla.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100px 200px;
+}
+
+#img_8 {
+  background-image: url("../img/frutilla-chips.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100px 200px;
+}
+
+.optionActive {
+  background: rgba(0, 0, 0, 0.3);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -41,7 +93,7 @@ header nav .menu ul li {
 header nav .menu ul li a {
   text-decoration: none;
   cursor: default;
-  padding: 15px 20px;
+  padding: 10px 20px;
   color: whitesmoke;
 }
 header nav .menu ul li:hover {
@@ -70,27 +122,58 @@ main .gusto {
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
 }
-main .gusto .foto {
+main .gusto .foto, main .gusto .foto--editActive, main .gusto .foto--editInactive {
   padding: 6px 6px;
   width: 100px;
   height: 200px;
 }
-main .gusto .nombre {
+main .gusto .box, main .gusto .box--editActive, main .gusto .box--editInactive {
+  max-width: 60%;
+  height: 200px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+main .gusto .box--editInactive .nombre {
+  display: block;
+  width: 100%;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-weight: 600;
   font-size: xx-large;
   text-align: center;
   color: cadetblue;
 }
-main .gusto .cucharita {
+main .gusto .box--editInactive input {
+  display: none;
+}
+main .gusto .box--editActive .nombre {
+  display: none;
+}
+main .gusto .box--editActive input {
+  display: block;
+  width: 100%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  font-size: xx-large;
+  text-align: center;
+  color: cadetblue;
+  border: none;
+  outline: none;
+}
+main .gusto .cucharita, main .gusto .cucharita--editActive, main .gusto .cucharita--sinGusto, main .gusto .cucharita--editInactive {
   width: 6%;
-  /* background: red; */
+}
+main .gusto .cucharita--editInactive {
   color: dodgerblue;
   text-align: right;
   font-size: xx-large;
 }
-main .gusto .cucharitaSinGusto {
+main .gusto .cucharita--sinGusto {
   color: red;
+}
+main .gusto .cucharita--editActive {
+  color: yellow;
+  transition: color 4s 1s;
 }
 
 @media (max-width: 768px) {

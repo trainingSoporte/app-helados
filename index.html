@@ -1,37 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
     <script src="https://kit.fontawesome.com/375c010283.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
     <header>
         <nav>
-          <div class="menu">
-            <input id="botMenu" type="checkbox" />
-            <label for="botMenu"><i class="fas fa-bars fa-lg"></i></label>
+            <div class="menu">
+                <input id="botMenu" type="checkbox" />
+                <label for="botMenu"><i class="fas fa-bars fa-lg"></i></label>
+                
+                <ul>
+                    <li><a id="archivo" class="navBar" href="">Archivo</a></li>
+                    <li><a id="editar" class="navBar" href="">Editar</a></li>
+                    <li><a id="facturar" class="navBar" href="">Facturar</a></li>
+                </ul>
+            </div>
             
-            <ul>
-                <li><a href="">Archivo</a></li>
-                <li><a href="">Editar</a></li>
-                <li><a href="">Facturar</a></li>
-              </ul>
-          </div>
-  
-          <div class="logo"><i class="fa-solid fa-ice-cream fa-xl"></i></div>
+            <div class="logo"><i class="fa-solid fa-ice-cream fa-xl"></i></div>
         </nav>
-      </header>
+    </header>
     
     <main>
-        <div id="1" class="gusto">
-            <div class="foto"><img src="./img/americana.jpeg" alt="americana"></div>
-            <div class="nombre">Americana</div>
+        <!-- <div id="gusto_1" class="gusto">
+            <figure class="foto" id="img_1"></figure>
+            <div class="box">
+                <input type="text" />
+                <div class="nombre">Americana</div>
+            </div>
+            <div class="cucharita"><i class="fas fa-utensil-spoon"></i></div>
+        </div> -->
+
+        <div id="gusto_1" class="gusto">
+            <figure id="img_1" class="foto"></figure>
+            <div class="box">
+                <input type="text">
+                <div class="nombre">Americana</div>
+            </div>
             <div class="cucharita"><i class="fas fa-utensil-spoon"></i></div>
         </div>
-        <div id="2" class="gusto">
+        <div id="gusto_2" class="gusto">
+            <figure id="img_2" class="foto"></figure>
+            <div class="box">
+                <input type="text">
+                <div class="nombre">Blueberry</div>
+            </div>
+            <div class="cucharita"><i class="fas fa-utensil-spoon"></i></div>
+        </div>
+        <div id="gusto_3" class="gusto">
+            <figure id="img_3" class="foto"></figure>
+            <div class="box">
+                <input type="text">
+                <div class="nombre">Dulce de leche</div>
+            </div>
+            <div class="cucharita"><i class="fas fa-utensil-spoon"></i></div>
+        </div>
+        <div id="gusto_4" class="gusto">
+            <figure id="img_4" class="foto"></figure>
+            <div class="box">
+                <input type="text">
+                <div class="nombre">Frutilla</div>
+            </div>
+            <div class="cucharita"><i class="fas fa-utensil-spoon"></i></div>
+        </div>
+        <div id="gusto_5" class="gusto">
+            <figure id="img_5" class="foto"></figure>
+            <div class="box">
+                <input type="text">
+                <div class="nombre">Granizado</div>
+            </div>
+            <div class="cucharita"><i class="fas fa-utensil-spoon"></i></div>
+        </div>
+        <div id="gusto_6" class="gusto">
+            <figure id="img_6" class="foto"></figure>
+            <div class="box">
+                <input type="text">
+                <div class="nombre">Menta</div>
+            </div>
+            <div class="cucharita"><i class="fas fa-utensil-spoon"></i></div>
+        </div>
+        <div id="gusto_7" class="gusto">
+            <figure id="img_7" class="foto"></figure>
+            <div class="box">
+                <input type="text">
+                <div class="nombre">Vainilla</div>
+            </div>
+            <div class="cucharita"><i class="fas fa-utensil-spoon"></i></div>
+        </div>
+        <div id="gusto_8" class="gusto">
+            <figure id="img_8" class="foto"></figure>
+            <div class="box">
+                <input type="text">
+                <div class="nombre">Frutilla con chips</div>
+            </div>
+            <div class="cucharita"><i class="fas fa-utensil-spoon"></i></div>
+        </div>
+
+
+        <!-- <div id="2" class="gusto">
             <div class="foto"><img src="./img/blueberry.jpeg" alt="blueberry"></div>
             <div class="nombre">Blueberry</div>
             <div class="cucharita"><i class="fas fa-utensil-spoon"></i></div>
@@ -65,10 +135,9 @@
             <div class="foto"><img src="./img/frutilla-chips.jpeg" alt="vainilla"></div>
             <div class="nombre">Frutilla con chips</div>
             <div class="cucharita"><i class="fas fa-utensil-spoon"></i></div>
-        </div>
+        </div> -->
     </main>
-
-
-
+    <script src="./scripts/edit.js"></script>
+    <script src="./main.js"></script>
 </body>
 </html>
