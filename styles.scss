@@ -28,11 +28,9 @@ header {
                 display: flex;
                 flex-direction: row;
                 li {
-                    // background-color: aqua;
                     border-right: 1px solid whitesmoke;
                     padding: 10px 0;
                     a {
-                        // background-color: red;
                         text-decoration: none;
                         cursor: default;
                         padding: 10px 20px;
@@ -62,28 +60,33 @@ main {
     grid-template: repeat(4, 1fr) / 45% 45%;
     .gusto {
         background: rgba(255, 255, 255, 0.9);
-        display: flex;
+        display: grid;
+        grid-template: 1fr / minmax(20%, 100px) minmax(min-content, max-content) 6% 1%;
+        grid-template-areas: "foto box cucharita .";
         align-items: center;
         gap: 10px;
         box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
         border-radius: 10px;
         .foto {
+            grid-area: foto;
             @include parameters.foto;
             padding: 6px 6px;
-            width: 100px;
+            // width: 100px;
             height: 200px;
         }
         .box {
+            grid-area: box;
             @include parameters.box;
-            max-width: 60%;
+            // max-width: 60%;
             height: 200px;
             display: flex;
             align-content: center;
             align-items: center;
         }
         .cucharita {
+            grid-area: cucharita;
             @include parameters.cucharita;
-            width: 6%;
+            // width: 6%;
         }
     }
 }

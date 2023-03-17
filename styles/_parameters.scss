@@ -1,14 +1,14 @@
 @use "sass:map";
 
 $fotos: (
-    "1": "../img/americana.jpeg",
-    "2": "../img/blueberry.jpeg",
-    "3": "../img/dulce-leche.jpeg",
-    "4": "../img/frutilla.jpeg",
-    "5": "../img/granizado.jpeg",
-    "6": "../img/menta.jpeg",
-    "7": "../img/vainilla.jpeg",
-    "8": "../img/frutilla-chips.jpeg",
+    "1": "./img/americana.jpeg",
+    "2": "./img/blueberry.jpeg",
+    "3": "./img/dulce-leche.jpeg",
+    "4": "./img/frutilla.jpeg",
+    "5": "./img/granizado.jpeg",
+    "6": "./img/menta.jpeg",
+    "7": "./img/vainilla.jpeg",
+    "8": "./img/frutilla-chips.jpeg",
 );
 
 img {

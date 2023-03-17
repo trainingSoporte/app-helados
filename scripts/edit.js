@@ -6,7 +6,17 @@
 const handleClickSave = (e) => {
     console.log('save');
     e.stopImmediatePropagation();
-    e.path.forEach(element => {
+    let _path=[];
+    if(e.path === undefined){
+        
+        let _node = e.target.parentNode;
+        while (_node !== null) {
+            _path.push(_node);
+            _node = _node.parentNode;
+        }
+    }
+    else _path = e.path;
+    _path.forEach(element => {
         //     console.log(element);
         if (element.classList != undefined && element.classList.contains('gusto')) {
 
@@ -33,8 +43,18 @@ const handleClickSave = (e) => {
 const handleClickEdit = (e) => {
     console.log(e);
     e.stopImmediatePropagation();
-    console.log(e.path);
-    e.path.forEach(element => {
+    console.log(e.target.parentNode);
+    let _path=[];
+    if(e.path === undefined){
+        
+        let _node = e.target.parentNode;
+        while (_node !== null) {
+            _path.push(_node);
+            _node = _node.parentNode;
+        }
+    }
+    else _path = e.path;
+    _path.forEach(element => {
         if (element.classList != undefined && element.classList.contains('gusto')) {
             element.removeEventListener('click', handleClickEdit);
             for (const child of element.children) {
@@ -42,6 +62,7 @@ const handleClickEdit = (e) => {
                 if (child.classList.contains('foto')) child.classList.toggle('foto--editActive');
                 if (child.classList.contains('box')) {
                     child.firstElementChild.value = child.lastElementChild.textContent;
+                    child.firstElementChild.focus();
                     child.classList.toggle('box--editActive');
                 }
                 if (child.classList.contains('cucharita')) {

@@ -8,49 +8,49 @@ img {
 }
 
 #img_1 {
-  background-image: url("../img/americana.jpeg");
+  background-image: url("./img/americana.jpeg");
   background-repeat: no-repeat;
   background-size: 100px 200px;
 }
 
 #img_2 {
-  background-image: url("../img/blueberry.jpeg");
+  background-image: url("./img/blueberry.jpeg");
   background-repeat: no-repeat;
   background-size: 100px 200px;
 }
 
 #img_3 {
-  background-image: url("../img/dulce-leche.jpeg");
+  background-image: url("./img/dulce-leche.jpeg");
   background-repeat: no-repeat;
   background-size: 100px 200px;
 }
 
 #img_4 {
-  background-image: url("../img/frutilla.jpeg");
+  background-image: url("./img/frutilla.jpeg");
   background-repeat: no-repeat;
   background-size: 100px 200px;
 }
 
 #img_5 {
-  background-image: url("../img/granizado.jpeg");
+  background-image: url("./img/granizado.jpeg");
   background-repeat: no-repeat;
   background-size: 100px 200px;
 }
 
 #img_6 {
-  background-image: url("../img/menta.jpeg");
+  background-image: url("./img/menta.jpeg");
   background-repeat: no-repeat;
   background-size: 100px 200px;
 }
 
 #img_7 {
-  background-image: url("../img/vainilla.jpeg");
+  background-image: url("./img/vainilla.jpeg");
   background-repeat: no-repeat;
   background-size: 100px 200px;
 }
 
 #img_8 {
-  background-image: url("../img/frutilla-chips.jpeg");
+  background-image: url("./img/frutilla-chips.jpeg");
   background-repeat: no-repeat;
   background-size: 100px 200px;
 }
@@ -116,19 +116,21 @@ main {
 }
 main .gusto {
   background: rgba(255, 255, 255, 0.9);
-  display: flex;
+  display: grid;
+  grid-template: 1fr/minmax(20%, 100px) minmax(min-content, max-content) 6% 1%;
+  grid-template-areas: "foto box cucharita .";
   align-items: center;
   gap: 10px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
 }
 main .gusto .foto, main .gusto .foto--editActive, main .gusto .foto--editInactive {
+  grid-area: foto;
   padding: 6px 6px;
-  width: 100px;
   height: 200px;
 }
 main .gusto .box, main .gusto .box--editActive, main .gusto .box--editInactive {
-  max-width: 60%;
+  grid-area: box;
   height: 200px;
   display: flex;
   align-content: center;
@@ -161,7 +163,7 @@ main .gusto .box--editActive input {
   outline: none;
 }
 main .gusto .cucharita, main .gusto .cucharita--editActive, main .gusto .cucharita--sinGusto, main .gusto .cucharita--editInactive {
-  width: 6%;
+  grid-area: cucharita;
 }
 main .gusto .cucharita--editInactive {
   color: dodgerblue;
