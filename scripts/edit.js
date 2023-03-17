@@ -6,6 +6,7 @@
 const handleClickSave = (e) => {
     console.log('save');
     e.stopImmediatePropagation();
+    // !patch e.path not supported
     let _path=[];
     if(e.path === undefined){
         
@@ -44,6 +45,7 @@ const handleClickEdit = (e) => {
     console.log(e);
     e.stopImmediatePropagation();
     console.log(e.target.parentNode);
+    // !patch e.path not supported
     let _path=[];
     if(e.path === undefined){
         
